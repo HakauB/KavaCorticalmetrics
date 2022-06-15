@@ -1,0 +1,12 @@
+# Ignore xlsx files and standard R ignores
+*.xlsx
+*.xls
+*.Rdata
+*.Rhistory
+*.Rprofile
+*.Rproj.user
+*.Rproj.user/
+*.Rcheck
+*.Rout
+
+stacked_TOJ_violin.pdf
