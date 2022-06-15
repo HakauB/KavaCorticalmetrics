@@ -292,6 +292,7 @@ stacked_plot_control2 = ggplot(Kava_Data_Control, aes(x=Test, y=TOJ)) + geom_vio
 
 grid.arrange(stacked_plot_active2, stacked_plot_control2)
 
+# see https://stackoverflow.com/questions/47651868/split-violin-plot-with-ggplot2-with-quantiles
 GeomSplitViolin <- ggproto("GeomSplitViolin", GeomViolin,
                            draw_group = function(self, data, ..., draw_quantiles = NULL) {
                              # Original function by Jan Gleixner (@jan-glx)
@@ -365,37 +366,31 @@ ggarrange(split_accuracy_plot, split_fatigue_plot, split_focus_plot, split_plast
 
 grouped_focus_plot = ggplot(data = Kava_Data, aes(x = Test, y = Focus, fill = `C/A`)) + 
                       geom_boxplot(show.legend = FALSE) +
-                      #scale_y_log10() +
                       scale_x_discrete(drop = FALSE, name = 'Test') +
                       labs(y="Focus score")
 
 grouped_accuracy_plot = ggplot(data = Kava_Data, aes(x = Test, y = Accuracy, fill = `C/A`)) + 
   geom_boxplot() +
-  #scale_y_log10() +
   scale_x_discrete(drop = FALSE, name = 'Test') +
   labs(y="Accuracy score")
 
 grouped_timeper_plot = ggplot(data = Kava_Data, aes(x = Test, y = `Time Percept`, fill = `C/A`)) + 
   geom_boxplot() +
-  #scale_y_log10() +
   scale_x_discrete(drop = FALSE, name = 'Test') +
   labs(y="Time perception score")
 
 grouped_plasticity_plot = ggplot(data = Kava_Data, aes(x = Test, y = Plasticity, fill = `C/A`)) + 
   geom_boxplot() +
-  #scale_y_log10() +
   scale_x_discrete(drop = FALSE, name = 'Test') +
   labs(y="Plasticity score")
 
 grouped_fatigue_plot = ggplot(data = Kava_Data, aes(x = Test, y = Fatigue, fill = `C/A`)) + 
   geom_boxplot() +
-  #scale_y_log10() +
   scale_x_discrete(drop = FALSE, name = 'Test') +
   labs(y="Fatigue score")
 
 grouped_toj_plot = ggplot(data = Kava_Data, aes(x = Test, y = TOJ, fill = `C/A`)) + 
   geom_boxplot() +
-  #scale_y_log10() +
   scale_x_discrete(drop = FALSE, name = 'Test') +
   labs(y="Temporal order judgement score")
 
