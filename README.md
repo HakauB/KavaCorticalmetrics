@@ -6,5 +6,5 @@ The experiment data is not included for privacy reasons.
 
 The most interesting findings are in the temporal order judgement data.
 
-A quick snapshot is provided below.
+A quick snapshot is provided below:
 ![Boxplots](AllBoxplots.png)
