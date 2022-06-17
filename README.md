@@ -8,4 +8,7 @@ The most interesting findings are in the temporal order judgement data.
 
 A quick snapshot is provided below.
 ![Alt text](AllBoxplots.png)
+
+or
+
 ![Alt text](SplitViolinPlots.png)
