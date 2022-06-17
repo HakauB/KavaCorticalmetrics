@@ -4,4 +4,4 @@ The code and produced plots for the paper [The impact of traditional kava (Piper
 
 The experiment data is not included for privacy reasons.
 
-![Alt text](AllBoxplots.pdf)
+![Alt text](AllBoxplots.png)
