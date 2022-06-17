@@ -346,18 +346,18 @@ geom_split_violin <- function(mapping = NULL, data = NULL, stat = "ydensity", po
 }
 
 split_toj_plot = ggplot(Kava_Data, aes(x=Test, y=TOJ, fill=`C/A`)) + 
-  geom_split_violin(draw_quantiles = c(0.25, 0.5, 0.75)) + labs(y="Temporal order judgement score")
+  geom_split_violin(draw_quantiles = c(0.25, 0.5, 0.75)) + labs(y="Temporal order judgement score", fill="Group")
 
 split_focus_plot = ggplot(Kava_Data, aes(x=Test, y=Focus, fill=`C/A`)) +
-  geom_split_violin(draw_quantiles = c(0.25, 0.5, 0.75)) + labs(y="Focus score")
+  geom_split_violin(draw_quantiles = c(0.25, 0.5, 0.75)) + labs(y="Focus score", fill="Group")
 split_accuracy_plot = ggplot(Kava_Data, aes(x=Test, y=Accuracy, fill=`C/A`)) +
-  geom_split_violin(draw_quantiles = c(0.25, 0.5, 0.75)) + labs(y="Accuracy score")
+  geom_split_violin(draw_quantiles = c(0.25, 0.5, 0.75)) + labs(y="Accuracy score", fill="Group")
 split_timeper_plot = ggplot(Kava_Data, aes(x=Test, y=`Time Percept`, fill=`C/A`)) +
-  geom_split_violin( draw_quantiles = c(0.25, 0.5, 0.75)) + labs(y="Time perception score")
+  geom_split_violin( draw_quantiles = c(0.25, 0.5, 0.75)) + labs(y="Time perception score", fill="Group")
 split_plasticity_plot = ggplot(Kava_Data, aes(x=Test, y=Plasticity, fill=`C/A`)) +
-  geom_split_violin(draw_quantiles = c(0.25, 0.5, 0.75)) + labs(y="Plasticity score")
+  geom_split_violin(draw_quantiles = c(0.25, 0.5, 0.75)) + labs(y="Plasticity score", fill="Group")
 split_fatigue_plot = ggplot(Kava_Data, aes(x=Test, y=Fatigue, fill=`C/A`)) + 
-  geom_split_violin(draw_quantiles = c(0.25, 0.5, 0.75)) + labs(y="Fatigue score")
+  geom_split_violin(draw_quantiles = c(0.25, 0.5, 0.75)) + labs(y="Fatigue score", fill="Group")
 
 ggarrange(split_accuracy_plot, split_fatigue_plot, split_focus_plot, split_plasticity_plot, split_toj_plot, split_timeper_plot,
           common.legend = TRUE, legend = "bottom")
@@ -365,34 +365,34 @@ ggarrange(split_accuracy_plot, split_fatigue_plot, split_focus_plot, split_plast
 ################################################################################
 
 grouped_focus_plot = ggplot(data = Kava_Data, aes(x = Test, y = Focus, fill = `C/A`)) + 
-                      geom_boxplot(show.legend = FALSE) +
+                      geom_boxplot() +
                       scale_x_discrete(drop = FALSE, name = 'Test') +
-                      labs(y="Focus score")
+                      labs(y="Focus score", fill="Group")
 
 grouped_accuracy_plot = ggplot(data = Kava_Data, aes(x = Test, y = Accuracy, fill = `C/A`)) + 
   geom_boxplot() +
   scale_x_discrete(drop = FALSE, name = 'Test') +
-  labs(y="Accuracy score")
+  labs(y="Accuracy score", fill="Group")
 
 grouped_timeper_plot = ggplot(data = Kava_Data, aes(x = Test, y = `Time Percept`, fill = `C/A`)) + 
   geom_boxplot() +
   scale_x_discrete(drop = FALSE, name = 'Test') +
-  labs(y="Time perception score")
+  labs(y="Time perception score", fill="Group")
 
 grouped_plasticity_plot = ggplot(data = Kava_Data, aes(x = Test, y = Plasticity, fill = `C/A`)) + 
   geom_boxplot() +
   scale_x_discrete(drop = FALSE, name = 'Test') +
-  labs(y="Plasticity score")
+  labs(y="Plasticity score", fill="Group")
 
 grouped_fatigue_plot = ggplot(data = Kava_Data, aes(x = Test, y = Fatigue, fill = `C/A`)) + 
   geom_boxplot() +
   scale_x_discrete(drop = FALSE, name = 'Test') +
-  labs(y="Fatigue score")
+  labs(y="Fatigue score", fill="Group")
 
 grouped_toj_plot = ggplot(data = Kava_Data, aes(x = Test, y = TOJ, fill = `C/A`)) + 
   geom_boxplot() +
   scale_x_discrete(drop = FALSE, name = 'Test') +
-  labs(y="Temporal order judgement score")
+  labs(y="Temporal order judgement score", fill="Group")
 
 ggarrange(grouped_accuracy_plot, grouped_fatigue_plot, grouped_focus_plot, grouped_plasticity_plot, grouped_toj_plot, grouped_timeper_plot,
              common.legend=TRUE, legend="bottom")
