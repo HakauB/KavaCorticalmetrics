@@ -4,4 +4,8 @@ The code and produced plots for the paper [The impact of traditional kava (Piper
 
 The experiment data is not included for privacy reasons.
 
+The most interesting findings are in the temporal order judgement data.
+
+A quick snapshot is provided below.
 ![Alt text](AllBoxplots.png)
+![Alt text](SplitViolinPlots.png)
