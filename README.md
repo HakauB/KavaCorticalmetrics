@@ -8,3 +8,4 @@ The most interesting findings are in the temporal order judgement data.
 
 A quick snapshot is provided below:
 ![Boxplots](AllBoxplots.png)
+Note: The tests are done at 3hr intervals, with the first test being taken at the commencement of the test. The active group then regularly consumes kava and the control group does not.
